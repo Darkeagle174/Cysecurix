@@ -30,7 +30,7 @@ body {
   width: 1050px;
   height: 350px;
   border-radius: 10px;
-  background: linear-gradient(270deg, #00008b, #87cefa);
+  background: linear-gradient(270deg, #6a0dad, #e6e6fa);
   background-size: 600% 600%;
   animation: GradientShift 10s ease infinite;
   z-index: -10;
@@ -43,7 +43,7 @@ body {
   z-index: -1;
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #0000a9, #230135);
+  background: linear-gradient(to bottom, #6a0dad, #230135);
   transform: translate3d(0, 0, 0) scale(0.95);
   filter: blur(20px);
 }
@@ -85,10 +85,10 @@ p {
 
 button {
   align-items: center;
-  background: linear-gradient(to bottom, #0000bb, #000000);
+  background: linear-gradient(to bottom, #6a0dad, #000000);
   border: 0;
   border-radius: 8px;
-  box-shadow: rgba(65, 77, 252, 0.2) 0 15px 30px -5px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #FFFFFF;
   display: flex;
