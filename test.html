@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #3A0CA3, #7209B7);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        .footer-logo h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .footer-contact, .footer-social, .footer-rights {
+            margin-bottom: 20px;
+        }
+
+        .footer-contact p, .footer-rights p {
+            margin: 5px 0;
+        }
+
+        .footer-contact a {
+            color: #FFD700; /* Gold color for the email link */
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-button {
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #FFC107; /* Slightly lighter gold on hover */
+        }
+
+        .footer-social a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #FFD700; /* Gold color on hover */
+        }
+
+        .footer-contact i {
+            margin-right: 8px;
+            transform: scaleX(-1); /* Mirror the phone icon */
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="CySecuriX Logo Only.png" alt="CySecuriX Logo">
+                <h2>CySecuriX</h2>
+            </div>
+            <div class="footer-contact">
+                <p><i class="fas fa-phone-alt"></i> 8698563259</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:reach@cysecurix.com">reach@cysecurix.com</a></p>
+                <button class="contact-button">Contact Us</button>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i> X</a>
+            </div>
+            <div class="footer-rights">
+                <p>&copy; 2024 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

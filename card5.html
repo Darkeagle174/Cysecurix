@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style5.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Officer Card</title>
 </head>
 
@@ -12,7 +13,12 @@
   <div class="cbody">
     <div class="card">
       <h1>Officer</h1>
-      <p>Officer-level cybersecurity jobs focus on developing and enforcing security policies, managing security operations, and ensuring compliance with regulations. Roles such as Chief Information Security Officer (CISO) and Security Operations Center (SOC) Manager involve overseeing the entire security strategy of an organization. These professionals coordinate with various departments to implement best practices, conduct risk assessments, and lead incident response efforts. Their leadership is vital in maintaining a secure environment and protecting the organization from potential cyber threats.</p>
+      <p>Officer-level cybersecurity jobs focus on developing and enforcing security policies, managing security
+        operations, and ensuring compliance with regulations. Roles such as Chief Information Security Officer (CISO)
+        and Security Operations Center (SOC) Manager involve overseeing the entire security strategy of an organization.
+        These professionals coordinate with various departments to implement best practices, conduct risk assessments,
+        and lead incident response efforts. Their leadership is vital in maintaining a secure environment and protecting
+        the organization from potential cyber threats.</p>
       <div class="roles">
         <button><span class="text">Data Privacy Officer</span> </span></button>
         <button><span class="text">Chief Information Security Officer</span></button>
@@ -20,6 +26,29 @@
       </div>
     </div>
   </div>
+  <div class="footer">
+    <div class="logo">
+      <img src="CySecuriX Logo Only.png">
+      <h1 class="logotext">CySecuriX</h1>
+    </div>
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <h4 class="phone"><i class="fas fa-phone-alt"></i>8698563259</h4>
+      <h4 class="email"><i class="fas fa-envelope"></i>reach@cysecurix.com</h4>
+    </div>
+    <div class="socials">
+      <h4><i class="fab fa-instagram"></i>Instagram</h4>
+      <h4><i class="fab fa-linkedin"></i>LinkedIn</h4>
+      <h4><i class="fab fa-twitter"></i>Twitter</h4>
+    </div>
+    <h1 class="f-font">&copy; <span id="currentYear"></span> All Rights Reserved.</h1>
+  </div>
+  <script>
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+    let copy = document.querySelector('.f-font');
+    copy.innerHTML = '&copy; ' + currentYear + ' All Rights Reserved.';
+  </script>
 </body>
 
 </html>
