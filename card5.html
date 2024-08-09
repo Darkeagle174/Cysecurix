@@ -13,41 +13,58 @@
   <div class="cbody">
     <div class="card">
       <h1>Officer</h1>
-      <p>Officer-level cybersecurity jobs focus on developing and enforcing security policies, managing security
+      <p>
+        Officer-level cybersecurity jobs focus on developing and enforcing security policies, managing security
         operations, and ensuring compliance with regulations. Roles such as Chief Information Security Officer (CISO)
         and Security Operations Center (SOC) Manager involve overseeing the entire security strategy of an organization.
         These professionals coordinate with various departments to implement best practices, conduct risk assessments,
         and lead incident response efforts. Their leadership is vital in maintaining a secure environment and protecting
-        the organization from potential cyber threats.</p>
+        the organization from potential cyber threats.
+      </p>
       <div class="roles">
-        <button><span class="text">Data Privacy Officer</span> </span></button>
+        <button><span class="text">Data Privacy Officer</span></button>
         <button><span class="text">Chief Information Security Officer</span></button>
         <button><span class="text">Chief Security Officer</span></button>
       </div>
     </div>
   </div>
+
   <div class="footer">
     <div class="logo">
-      <img src="CySecuriX Logo Only.png">
+      <img src="Untitled design (4).png" alt="CySecuriX Logo">
       <h1 class="logotext">CySecuriX</h1>
     </div>
     <div class="contact">
       <h2>Contact Us</h2>
-      <h4 class="phone"><i class="fas fa-phone-alt"></i>8698563259</h4>
-      <h4 class="email"><i class="fas fa-envelope"></i>reach@cysecurix.com</h4>
+      <h4 class="phone"  onclick="copyPhoneNumber()"><i class="fas fa-phone-alt"></i>+91 8698563259</h4>
+      <h4 class="email"><a href="mailto:reach@cysecurix.com"><i class="fas fa-envelope"></i>reach@cysecurix.com</a></h4>
     </div>
     <div class="socials">
-      <h4><i class="fab fa-instagram"></i>Instagram</h4>
-      <h4><i class="fab fa-linkedin"></i>LinkedIn</h4>
-      <h4><i class="fab fa-twitter"></i>Twitter</h4>
+      <h4><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></h4>
+      <h4><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></h4>
+      <h4><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></h4>
     </div>
     <h1 class="f-font">&copy; <span id="currentYear"></span> All Rights Reserved.</h1>
   </div>
+  <div id="toast">Phone number copied to clipboard!</div>
   <script>
+   function copyPhoneNumber() {
+            const phoneNumber = "+918698563259";
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                showToast();
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById("toast");
+            toast.className = "toast show";
+            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear();
-    let copy = document.querySelector('.f-font');
-    copy.innerHTML = '&copy; ' + currentYear + ' All Rights Reserved.';
+    let copy = document.querySelector('.f-font span');
+    copy.textContent = currentYear;
   </script>
 </body>
 

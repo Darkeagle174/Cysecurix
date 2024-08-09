@@ -131,24 +131,23 @@ button:active {
   transform: scale(0.9);
 }
 
-@keyframes GradientShift {
+.footer {
+  box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(315deg, #cb94ff, #FFFFFF 50%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
-}
-
-.footer {
-  box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(120deg, #8e44ad, #c39bd3);
-
 }
 
 img {
@@ -162,7 +161,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .logotext {
@@ -181,12 +180,33 @@ img {
 .phone {
   margin-top: -10px;
   font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.phone:hover {
+  color: #0000d1;
+  text-shadow: 0px 0px 5px rgba(0, 0, 209, 0.5);
 }
 
 .email {
   margin-top: -10px;
   font-size: 20px;
+  text-decoration: none;
 }
+
+.email a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.email a:hover {
+  color: #0000d1;
+  text-shadow: 0px 0px 5px rgba(0, 0, 209, 0.5);
+}
+
+
 
 .contact i {
   margin-right: 8px;
@@ -200,16 +220,71 @@ img {
   gap: 90px;
   font-family: 'Inter';
   font-size: 20px;
+  cursor: pointer;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.socials a:hover {
+  font-size: 22px;
+  color:#0000d1;
 }
 
 .socials i {
   padding-right: 8px;
+  cursor: pointer;
 }
 
 .f-font {
   text-align: center;
   font-family: 'Inter';
   justify-content: center;
-  margin: 25px 0px;
+  margin: 0px;
+  padding: 25px 0px;
   font-size: larger;
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  transform: translateX(-50%);
+}
+
+.toast.show {
+  visibility: visible;
+  animation: fadeInOut 3s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+
+@keyframes GradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
