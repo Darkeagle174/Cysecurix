@@ -30,7 +30,7 @@ body {
   width: 1050px;
   height: 350px;
   border-radius: 10px;
-  background: linear-gradient(270deg, #6a0dad, #e6e6fa);
+  background: linear-gradient(270deg, #6a0dad, #dbccfd);
   background-size: 600% 600%;
   animation: GradientShift 10s ease infinite;
   z-index: -10;

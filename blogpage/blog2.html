@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blogstyle2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Minimalistic Blog Page</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>CyBlogX</h1>
+        <!-- <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Filters</h2>
+            <div class="tags">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="Researcher">Researcher</button>
+                <button data-filter="Offensive">Offensive</button>
+                <button data-filter="Defensive">Defensive</button>
+                <button data-filter="Engineer">Engineer</button>
+                <button data-filter="Officer">Officer</button>
+            </div>
+        </div>
+
+        <div class="blog-container">
+            <div class="blog-card Researcher">
+                <img src="https://plus.unsplash.com/premium_photo-1661644892901-b2e08b5c0bf2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Blog Image">
+                <div class="content">
+                    <h2>Security Researcher</h2>
+                    <div class="social-share">
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="copylink"><i class="fa-solid fa-copy"></i></a>
+                    </div>
+
+                    <p>Has a strong track record of working with engineering and product teams on assessing applications
+                        against security standards, conducting risk-based assessments of application security practices,
+                        designing secure systems, and driving security by building close working partnerships with
+                        Product and Engineering professionals.
+                    </p>
+                    <button>Read More</button>
+                </div>
+            </div>
+
+            <div class="blog-card Offensive">
+                <img src="https://images.unsplash.com/photo-1516434464077-12b1b87bb716?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Blog Image">
+                <div class="content">
+                    <h2>Bug Bounty Hunter</h2>
+                    <div class="social-share">
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="copylink"><i class="fa-solid fa-copy"></i></a>
+                    </div>
+                    <p>A bug bounty hunter is an individual who knows the nuts and bolts of cybersecurity and is well
+                        familiar with finding bugs or flaws. Simply put, a bug bounty hunter tests applications and
+                        platforms and looks for bugs that sometimes even the in-house development team fails to spot.
+                        Once spotting a bug, these professionals inform the company (or the concerned body behind the
+                        application or the platform) about the bug and in return, they get paid. The benefits are not
+                        always monetary.
+                    </p>
+                    <button>Read More</button>
+                </div>
+            </div>
+
+            <div class="blog-card Defensive">
+                <img src="https://plus.unsplash.com/premium_photo-1663050681752-4c95effcca58?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Blog Image">
+                <div class="content">
+                    <h2>Digital Forensics Analyst</h2>
+                    <div class="social-share">
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="copylink"><i class="fa-solid fa-copy"></i></a>
+                    </div>
+
+                    <p>The Digital Forensics Analyst/Investigator performs a variety of highly technical analyses and
+                        procedures dealing with the collection, processing, preservation, analysis, and presentation of
+                        computer?related evidence, and is responsible for disseminating and reporting cyber?related
+                        activities, conducing vulnerability analyses and risk management of computer systems and
+                        recovering information from computers and data storage devices. Use forensic tools and
+                        investigative methods to find specific electronic data, including Internet use history, word
+                        processing documents, images and other files. Proficient in the latest forensic, response, and
+                        reverse engineering skills, but is astute in the latest exploit methodologies. Recover
+                        information from computers and data storage devices. Use forensic tools and investigative
+                        methods to find specific electronic data, including Internet use history, word processing
+                        documents, images and other files and information that have been hidden, deleted or lost.
+                    </p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <!-- Add more blog cards as needed -->
+        </div>
+    </div>
+    <div id="toast" class="toast">Link copied to clipboard!</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Animation on Load
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            // Animation on Load
+            gsap.fromTo(blogCards,
+                {
+                    y: 100,
+                    opacity: 0,
+                    ease: "power2.out"
+                },
+                {
+                    duration: 0.75,
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.1,
+                    ease: "power2.out"
+                }
+            );
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sidebar animation on hover
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.addEventListener('mouseenter', () => {
+                gsap.to(sidebar, { duration: 0.5, x: 10, backgroundColor: "#eee" });
+            });
+            sidebar.addEventListener('mouseleave', () => {
+                gsap.to(sidebar, { duration: 0.5, x: 0, backgroundColor: "#fff" });
+            });
+
+            // Blog card hover animation
+            const blogCards = document.querySelectorAll('.blog-card');
+            blogCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    gsap.to(card, { duration: 0.3, scale: 1.05 });
+                });
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, { duration: 0.3, scale: 1 });
+                });
+            });
+
+        });
+        const buttons = document.querySelectorAll('.tags button');
+        const blogs = document.querySelectorAll('.blog-card');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+                blogs.forEach(blog => {
+                    if (filter === 'all' || blog.classList.contains(filter)) {
+                        gsap.to(blog, {
+                            duration: 0.5,
+                            y: 0,
+                            opacity: 1,
+                            ease: "power2.out",
+                            display: "block"
+                        });
+                    } else {
+                        gsap.to(blog, {
+                            duration: 0.5,
+                            y: 20,
+                            opacity: 0,
+                            ease: "power2.in",
+                            display: "none"
+                        });
+                    }
+                });
+            });
+        });
+        // document.querySelector(".copylink").addEventListener("click", function (e) {
+        //     e.preventDefault();
+
+        //     // Copy the blog post URL to the clipboard
+        //     const url = window.location.href;
+        //     navigator.clipboard.writeText(url).then(() => {
+        //         // Show the toast notification
+        //         const toast = document.querySelector(".toast");
+        //         toast.classList.add("show");
+
+        //         // Hide the toast notification after 3 seconds
+        //         setTimeout(() => {
+        //             toast.classList.remove("show");
+        //         }, 3000);
+        //     }).catch(err => {
+        //         console.error('Failed to copy: ', err);
+        //     });
+        // });
+
+        document.querySelector(".copylink").addEventListener("click", function (e) {
+            console.log('clicked')
+        })
+
+    </script>
+</body>
+
+</html>
