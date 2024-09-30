@@ -81,12 +81,12 @@ body {
 
 /* Styling for Specific Buttons */
 .tags button[data-filter="Researcher"] {
-    background-color: #87cefa;
-    border: 10px #00008b;
+    background-color: #98fb98;
+    border: 10px #006400;
 }
 .tags button[data-filter="Researcher"]:hover,
 .tags button[data-filter="Researcher"].active {
-    background-color: #00008b;
+    background-color: #006400;
     color: #fff;
 }
 
@@ -100,11 +100,11 @@ body {
 }
 
 .tags button[data-filter="Defensive"] {
-    background-color: #98fb98;
+    background-color: #87cefa;
 }
 .tags button[data-filter="Defensive"]:hover,
 .tags button[data-filter="Defensive"].active {
-    background-color: #006400;
+    background-color: #00008b;
     color: #fff;
 }
 
@@ -123,7 +123,7 @@ body {
 .tags button[data-filter="Officer"]:hover,
 .tags button[data-filter="Officer"].active {
     background-color: #ffd900;
-    color: #fff;
+    color: #000;
 }
 
 /* Special Case for 'All' Button */

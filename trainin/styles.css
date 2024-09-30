@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .neon-gradient-card {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .neon-gradient-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #ff00aa, #00FFF1);
+    animation: spin 5s linear infinite;
+    z-index: -1;
+    filter: blur(20px);
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .neon-gradient-card h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #ff00aa, #00FFF1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
